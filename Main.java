@@ -1,7 +1,7 @@
-package blackjack_java;
-
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World");
+        Card card = new Card(13, "Hearts");
+        System.out.println(card);
+
     }
 }
