@@ -10,6 +10,7 @@ public class Main {
                 deck.enqueue(card);
             }
         }
+        deck.shuffle();
         System.out.println(deck);
     }
 }

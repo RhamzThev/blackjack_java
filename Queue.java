@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Queue {
     private Card[] array;
     private int front;
@@ -58,7 +60,17 @@ public class Queue {
         this.front++;
         this.size--;
         return value;
-    }  
+    }
+    
+    public void shuffle() {
+        Random random = new Random();
+        for (Card item : this.array) {
+            int randint = random.nextInt(this.array.length);
+            Card temp = this.array[randint];
+            this.array[randint] = item;
+            item = temp;
+        }
+    }
 
     public String toString() {
         String str = "";
